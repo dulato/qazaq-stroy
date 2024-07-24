@@ -1,0 +1,16 @@
+@import "normalize";
+@import "variables";
+
+*, body {
+    font-family: $roboto;
+    font-style: normal;
+    color: $black;
+}
+
+.container {
+    display: block;
+    max-width: $container;
+    width: 100%;
+    margin: $margin;
+    padding: 0 20px;
+}
