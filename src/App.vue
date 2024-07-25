@@ -1,10 +1,8 @@
-<script setup lang="ts">
-import Main from '@/components/Main.vue';
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="app">
-    <Main />
+    <router-view></router-view>
   </div>
 </template>
 
@@ -14,7 +12,7 @@ import Main from '@/components/Main.vue';
 .app {
   position: relative;
   min-height: 100vh;
-  padding: 40px 0;
-  background: $white;
+  background: $lighter;
+  overflow-x: hidden;
 }
 </style>

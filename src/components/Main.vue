@@ -1,12 +1,23 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+onMounted(() => {
+    if(localStorage.getItem('auth')) {
+        return;
+    } else {
+        router.push('/login');
+    }
+});
+</script>
 
 <template>
     <div class="main">
         <div class="container">
             <div class="main__content">
-                <h1 class="title">
-                    This is Qazaq Stroy website
-                </h1>
+                Main Page
             </div>
         </div>
     </div>
@@ -15,13 +26,8 @@
 <style lang="scss">
 @import '@/assets/styles/variables';
 
-.title {
-    font-family: $roboto;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: left;
-    color: $black;
+.main {
+    position: relative;
+    padding: 100px 0 30px 0;
 }
 </style>
